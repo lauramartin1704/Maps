@@ -20,6 +20,9 @@ public class SlidingAdapter extends PagerAdapter {
     private ArrayList<String> urls;
     private Context context;
 
+    public SlidingAdapter() {
+    }
+
     public SlidingAdapter(Context context, ArrayList<String> urls) {
         this.context = context;
         this.urls = urls;

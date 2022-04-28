@@ -4,6 +4,10 @@ public class ModelApi {
     public String status;
     public ModelResults results;
 
+    public ModelApi() {
+
+    }
+
     public String getStatus() {
         return status;
     }

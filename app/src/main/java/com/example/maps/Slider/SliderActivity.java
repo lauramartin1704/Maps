@@ -1,5 +1,6 @@
 package com.example.maps.Slider;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import com.example.maps.MapsActivity;
@@ -25,6 +26,7 @@ public class SliderActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private ActivitySliderBinding binding;
     ArrayList<String> urls;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -4,6 +4,9 @@ public class modelFlickr {
     public String stat;
     public modelPhotos photos;
 
+    public modelFlickr() {
+    }
+
     public String getStat() {
         return stat;
     }

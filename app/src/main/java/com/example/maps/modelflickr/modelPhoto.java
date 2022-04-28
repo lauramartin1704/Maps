@@ -6,6 +6,9 @@ public class modelPhoto {
     public String secret;
     public String server;
 
+    public modelPhoto() {
+    }
+
     public String getOwner() {
         return owner;
     }

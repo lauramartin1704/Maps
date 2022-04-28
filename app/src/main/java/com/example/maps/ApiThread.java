@@ -16,18 +16,20 @@ import java.net.URL;
 
 public class ApiThread extends AsyncTask<Void, Void, String> {
     public JSONObject jObject;
-    public double latitud;
-    public double longitud;
+    public double lat;
+    public double lng;
+
     public ApiThread(double lat,double lng){
-        this.latitud=lat;
-        this.longitud=lng;
+        this.lat=lat;
+        this.lng=lng;
     }
     @Override
     protected String doInBackground(Void... voids) {
         //crear objecte url
-        URL url = null;
+
         try {
-            url = new URL("https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400");
+            URL url = new URL("https://api.sunrise-sunset.org/json?lat=" + lat + "&lng="+lng);
+
             //Realitzarem la connexió mitjançant la classe HttpURLConnection
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             // Read API results
@@ -55,6 +57,8 @@ public class ApiThread extends AsyncTask<Void, Void, String> {
             //Finalment agafem el “fill” sunrise de results
             String sunrise = jObject.getString("sunrise");
             Log.i("logtest", "------>" + sunrise);
+            String sunset = jObject.getString("sunset");
+            Log.i("sunset", "------>" + sunset);
         } catch (JSONException e) {
             e.printStackTrace();
         }

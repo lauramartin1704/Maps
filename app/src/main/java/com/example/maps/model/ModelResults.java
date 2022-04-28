@@ -4,6 +4,9 @@ public class ModelResults {
     public String sunrise;
     public String sunset;
 
+    public ModelResults() {
+    }
+
     public String getSunrise() {
         return sunrise;
     }
